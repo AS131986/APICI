@@ -23,7 +23,7 @@ class MobileBankApiTestV3 {
                 .statusCode(200)
                 .body(matchesJsonSchemaInClasspath("accounts.schema.json"))
                 .body("", hasSize(3))
-                .body("[0].currency", equalTo("USD"))
+                .body("[0].currency", equalTo("RUB"))
                 .body("[0].balance", greaterThanOrEqualTo(0))
         ;
     }
